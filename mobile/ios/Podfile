@@ -1,0 +1,18 @@
+platform :ios, '10.1'
+
+target 'libopenfortivpn' do
+  use_frameworks!
+
+  # SSL
+  #pod 'OpenSSL-Pod', :git => 'https://github.com/FredericJacobs/OpenSSL-Pod.git', :branch => 'OpenSSL_1_1_1-stable'
+  pod 'OpenSSL-Universal'
+end
+
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      config.build_settings['SWIFT_VERSION'] = '5.0'
+      config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '10.1'
+    end
+  end
+end

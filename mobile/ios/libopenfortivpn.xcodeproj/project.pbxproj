@@ -1,0 +1,449 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BAFC29D6266B7DF3001C9E5A /* openfortivpn.m in Sources */ = {isa = PBXBuildFile; fileRef = BAFC29D5266B7DF3001C9E5A /* openfortivpn.m */; };
+		BAFC29D7266B7DF3001C9E5A /* openfortivpn.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = BAFC29D4266B7DF3001C9E5A /* openfortivpn.h */; };
+		BAFC2A1E266B8883001C9E5A /* xml.c in Sources */ = {isa = PBXBuildFile; fileRef = BAFC2A08266B8883001C9E5A /* xml.c */; };
+		BAFC2A1F266B8883001C9E5A /* log.c in Sources */ = {isa = PBXBuildFile; fileRef = BAFC2A09266B8883001C9E5A /* log.c */; };
+		BAFC2A20266B8883001C9E5A /* io.c in Sources */ = {isa = PBXBuildFile; fileRef = BAFC2A0C266B8883001C9E5A /* io.c */; };
+		BAFC2A21266B8883001C9E5A /* hdlc.c in Sources */ = {isa = PBXBuildFile; fileRef = BAFC2A0F266B8883001C9E5A /* hdlc.c */; };
+		BAFC2A23266B8883001C9E5A /* config.c in Sources */ = {isa = PBXBuildFile; fileRef = BAFC2A17266B8883001C9E5A /* config.c */; };
+		BAFC2A24266B8883001C9E5A /* http.c in Sources */ = {isa = PBXBuildFile; fileRef = BAFC2A18266B8883001C9E5A /* http.c */; };
+		BAFC2A25266B8883001C9E5A /* userinput.c in Sources */ = {isa = PBXBuildFile; fileRef = BAFC2A19266B8883001C9E5A /* userinput.c */; };
+		BAFC2A26266B8883001C9E5A /* tunnel.c in Sources */ = {isa = PBXBuildFile; fileRef = BAFC2A1A266B8883001C9E5A /* tunnel.c */; };
+		BAFC2A27266B8883001C9E5A /* openssl_hostname_validation.c in Sources */ = {isa = PBXBuildFile; fileRef = BAFC2A1B266B8883001C9E5A /* openssl_hostname_validation.c */; };
+		BAFC2A28266B8883001C9E5A /* ipv4.c in Sources */ = {isa = PBXBuildFile; fileRef = BAFC2A1D266B8883001C9E5A /* ipv4.c */; };
+		BAFC2A2D266B8BF5001C9E5A /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAFC2A2C266B8BF5001C9E5A /* SystemConfiguration.framework */; };
+		BAFC2A32266B8E21001C9E5A /* posix_spawn.c in Sources */ = {isa = PBXBuildFile; fileRef = BAFC2A31266B8E21001C9E5A /* posix_spawn.c */; };
+		CC8FA990250F72EE4A526871 /* Pods_libopenfortivpn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26A4E6347F9E6A8BA8826168 /* Pods_libopenfortivpn.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		BAFC29CF266B7DF3001C9E5A /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				BAFC29D7266B7DF3001C9E5A /* openfortivpn.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		26A4E6347F9E6A8BA8826168 /* Pods_libopenfortivpn.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_libopenfortivpn.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8871C039A66D0E83A4FAFED8 /* Pods-libopenfortivpn.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-libopenfortivpn.debug.xcconfig"; path = "Target Support Files/Pods-libopenfortivpn/Pods-libopenfortivpn.debug.xcconfig"; sourceTree = "<group>"; };
+		8AE6D012BA49FDF68D8FBE5D /* Pods-libopenfortivpn.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-libopenfortivpn.release.xcconfig"; path = "Target Support Files/Pods-libopenfortivpn/Pods-libopenfortivpn.release.xcconfig"; sourceTree = "<group>"; };
+		BAFC29D1266B7DF3001C9E5A /* liblibopenfortivpn.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = liblibopenfortivpn.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		BAFC29D4266B7DF3001C9E5A /* openfortivpn.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = openfortivpn.h; sourceTree = "<group>"; };
+		BAFC29D5266B7DF3001C9E5A /* openfortivpn.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = openfortivpn.m; sourceTree = "<group>"; };
+		BAFC2A02266B81A3001C9E5A /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssl.a; path = "../../../../../../../../usr/local/Cellar/openssl@1.1/1.1.1k/lib/libssl.a"; sourceTree = "<group>"; };
+		BAFC2A04266B81BD001C9E5A /* libssl.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libssl.1.1.dylib; path = "../../../../../../../../usr/local/Cellar/openssl@1.1/1.1.1k/lib/libssl.1.1.dylib"; sourceTree = "<group>"; };
+		BAFC2A08266B8883001C9E5A /* xml.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = xml.c; sourceTree = "<group>"; };
+		BAFC2A09266B8883001C9E5A /* log.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = log.c; sourceTree = "<group>"; };
+		BAFC2A0A266B8883001C9E5A /* http.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = http.h; sourceTree = "<group>"; };
+		BAFC2A0B266B8883001C9E5A /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
+		BAFC2A0C266B8883001C9E5A /* io.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = io.c; sourceTree = "<group>"; };
+		BAFC2A0D266B8883001C9E5A /* tunnel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tunnel.h; sourceTree = "<group>"; };
+		BAFC2A0E266B8883001C9E5A /* userinput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = userinput.h; sourceTree = "<group>"; };
+		BAFC2A0F266B8883001C9E5A /* hdlc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = hdlc.c; sourceTree = "<group>"; };
+		BAFC2A10266B8883001C9E5A /* openssl_hostname_validation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = openssl_hostname_validation.h; sourceTree = "<group>"; };
+		BAFC2A11266B8883001C9E5A /* ipv4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ipv4.h; sourceTree = "<group>"; };
+		BAFC2A12266B8883001C9E5A /* ssl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ssl.h; sourceTree = "<group>"; };
+		BAFC2A14266B8883001C9E5A /* log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = log.h; sourceTree = "<group>"; };
+		BAFC2A15266B8883001C9E5A /* xml.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xml.h; sourceTree = "<group>"; };
+		BAFC2A16266B8883001C9E5A /* io.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = io.h; sourceTree = "<group>"; };
+		BAFC2A17266B8883001C9E5A /* config.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = config.c; sourceTree = "<group>"; };
+		BAFC2A18266B8883001C9E5A /* http.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = http.c; sourceTree = "<group>"; };
+		BAFC2A19266B8883001C9E5A /* userinput.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = userinput.c; sourceTree = "<group>"; };
+		BAFC2A1A266B8883001C9E5A /* tunnel.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = tunnel.c; sourceTree = "<group>"; };
+		BAFC2A1B266B8883001C9E5A /* openssl_hostname_validation.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = openssl_hostname_validation.c; sourceTree = "<group>"; };
+		BAFC2A1C266B8883001C9E5A /* hdlc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdlc.h; sourceTree = "<group>"; };
+		BAFC2A1D266B8883001C9E5A /* ipv4.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ipv4.c; sourceTree = "<group>"; };
+		BAFC2A2C266B8BF5001C9E5A /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
+		BAFC2A30266B8C3D001C9E5A /* route.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = route.h; sourceTree = "<group>"; };
+		BAFC2A31266B8E21001C9E5A /* posix_spawn.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = posix_spawn.c; path = External/posix_spawn.c; sourceTree = SOURCE_ROOT; };
+		BAFC2A33266B8E94001C9E5A /* posix_spawn.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = posix_spawn.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BAFC29CE266B7DF3001C9E5A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BAFC2A2D266B8BF5001C9E5A /* SystemConfiguration.framework in Frameworks */,
+				CC8FA990250F72EE4A526871 /* Pods_libopenfortivpn.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		70C6AF48CC2BF302BAEC878A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8871C039A66D0E83A4FAFED8 /* Pods-libopenfortivpn.debug.xcconfig */,
+				8AE6D012BA49FDF68D8FBE5D /* Pods-libopenfortivpn.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		BAFC29C8266B7DF3001C9E5A = {
+			isa = PBXGroup;
+			children = (
+				BAFC29D3266B7DF3001C9E5A /* openfortivpn */,
+				BAFC29D2266B7DF3001C9E5A /* Products */,
+				BAFC2A01266B81A3001C9E5A /* Frameworks */,
+				70C6AF48CC2BF302BAEC878A /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		BAFC29D2266B7DF3001C9E5A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BAFC29D1266B7DF3001C9E5A /* liblibopenfortivpn.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BAFC29D3266B7DF3001C9E5A /* openfortivpn */ = {
+			isa = PBXGroup;
+			children = (
+				BAFC29D4266B7DF3001C9E5A /* openfortivpn.h */,
+				BAFC29D5266B7DF3001C9E5A /* openfortivpn.m */,
+				BAFC2A07266B8883001C9E5A /* src */,
+				BAFC2A2E266B8C3D001C9E5A /* External */,
+			);
+			path = openfortivpn;
+			sourceTree = "<group>";
+		};
+		BAFC2A01266B81A3001C9E5A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BAFC2A2C266B8BF5001C9E5A /* SystemConfiguration.framework */,
+				BAFC2A04266B81BD001C9E5A /* libssl.1.1.dylib */,
+				BAFC2A02266B81A3001C9E5A /* libssl.a */,
+				26A4E6347F9E6A8BA8826168 /* Pods_libopenfortivpn.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BAFC2A07266B8883001C9E5A /* src */ = {
+			isa = PBXGroup;
+			children = (
+				BAFC2A17266B8883001C9E5A /* config.c */,
+				BAFC2A0B266B8883001C9E5A /* config.h */,
+				BAFC2A0F266B8883001C9E5A /* hdlc.c */,
+				BAFC2A1C266B8883001C9E5A /* hdlc.h */,
+				BAFC2A18266B8883001C9E5A /* http.c */,
+				BAFC2A0A266B8883001C9E5A /* http.h */,
+				BAFC2A0C266B8883001C9E5A /* io.c */,
+				BAFC2A16266B8883001C9E5A /* io.h */,
+				BAFC2A1D266B8883001C9E5A /* ipv4.c */,
+				BAFC2A11266B8883001C9E5A /* ipv4.h */,
+				BAFC2A09266B8883001C9E5A /* log.c */,
+				BAFC2A14266B8883001C9E5A /* log.h */,
+				BAFC2A1B266B8883001C9E5A /* openssl_hostname_validation.c */,
+				BAFC2A10266B8883001C9E5A /* openssl_hostname_validation.h */,
+				BAFC2A12266B8883001C9E5A /* ssl.h */,
+				BAFC2A1A266B8883001C9E5A /* tunnel.c */,
+				BAFC2A0D266B8883001C9E5A /* tunnel.h */,
+				BAFC2A19266B8883001C9E5A /* userinput.c */,
+				BAFC2A0E266B8883001C9E5A /* userinput.h */,
+				BAFC2A08266B8883001C9E5A /* xml.c */,
+				BAFC2A15266B8883001C9E5A /* xml.h */,
+			);
+			name = src;
+			path = ../../../src;
+			sourceTree = "<group>";
+		};
+		BAFC2A2E266B8C3D001C9E5A /* External */ = {
+			isa = PBXGroup;
+			children = (
+				BAFC2A31266B8E21001C9E5A /* posix_spawn.c */,
+				BAFC2A33266B8E94001C9E5A /* posix_spawn.h */,
+				BAFC2A2F266B8C3D001C9E5A /* net */,
+			);
+			path = External;
+			sourceTree = SOURCE_ROOT;
+		};
+		BAFC2A2F266B8C3D001C9E5A /* net */ = {
+			isa = PBXGroup;
+			children = (
+				BAFC2A30266B8C3D001C9E5A /* route.h */,
+			);
+			path = net;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BAFC29D0266B7DF3001C9E5A /* libopenfortivpn */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BAFC29DA266B7DF3001C9E5A /* Build configuration list for PBXNativeTarget "libopenfortivpn" */;
+			buildPhases = (
+				E36743EEC3387A84AE69EA8F /* [CP] Check Pods Manifest.lock */,
+				BAFC29CD266B7DF3001C9E5A /* Sources */,
+				BAFC29CE266B7DF3001C9E5A /* Frameworks */,
+				BAFC29CF266B7DF3001C9E5A /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = libopenfortivpn;
+			productName = openfortivpn;
+			productReference = BAFC29D1266B7DF3001C9E5A /* liblibopenfortivpn.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BAFC29C9266B7DF3001C9E5A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					BAFC29D0266B7DF3001C9E5A = {
+						CreatedOnToolsVersion = 12.5;
+					};
+				};
+			};
+			buildConfigurationList = BAFC29CC266B7DF3001C9E5A /* Build configuration list for PBXProject "libopenfortivpn" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BAFC29C8266B7DF3001C9E5A;
+			productRefGroup = BAFC29D2266B7DF3001C9E5A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BAFC29D0266B7DF3001C9E5A /* libopenfortivpn */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E36743EEC3387A84AE69EA8F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-libopenfortivpn-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BAFC29CD266B7DF3001C9E5A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BAFC2A21266B8883001C9E5A /* hdlc.c in Sources */,
+				BAFC2A27266B8883001C9E5A /* openssl_hostname_validation.c in Sources */,
+				BAFC2A1F266B8883001C9E5A /* log.c in Sources */,
+				BAFC2A25266B8883001C9E5A /* userinput.c in Sources */,
+				BAFC2A23266B8883001C9E5A /* config.c in Sources */,
+				BAFC2A28266B8883001C9E5A /* ipv4.c in Sources */,
+				BAFC2A26266B8883001C9E5A /* tunnel.c in Sources */,
+				BAFC2A20266B8883001C9E5A /* io.c in Sources */,
+				BAFC29D6266B7DF3001C9E5A /* openfortivpn.m in Sources */,
+				BAFC2A32266B8E21001C9E5A /* posix_spawn.c in Sources */,
+				BAFC2A1E266B8883001C9E5A /* xml.c in Sources */,
+				BAFC2A24266B8883001C9E5A /* http.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		BAFC29D8266B7DF3001C9E5A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		BAFC29D9266B7DF3001C9E5A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BAFC29DB266B7DF3001C9E5A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8871C039A66D0E83A4FAFED8 /* Pods-libopenfortivpn.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				LIBRARY_SEARCH_PATHS = /usr/include/net;
+				OTHER_CFLAGS = "-DTARGET_MOBILE";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BAFC29DC266B7DF3001C9E5A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8AE6D012BA49FDF68D8FBE5D /* Pods-libopenfortivpn.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				LIBRARY_SEARCH_PATHS = /usr/include/net;
+				OTHER_CFLAGS = "-DTARGET_MOBILE";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BAFC29CC266B7DF3001C9E5A /* Build configuration list for PBXProject "libopenfortivpn" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BAFC29D8266B7DF3001C9E5A /* Debug */,
+				BAFC29D9266B7DF3001C9E5A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BAFC29DA266B7DF3001C9E5A /* Build configuration list for PBXNativeTarget "libopenfortivpn" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BAFC29DB266B7DF3001C9E5A /* Debug */,
+				BAFC29DC266B7DF3001C9E5A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BAFC29C9266B7DF3001C9E5A /* Project object */;
+}

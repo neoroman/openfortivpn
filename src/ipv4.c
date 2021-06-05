@@ -34,6 +34,10 @@
 #include <stdint.h>
 #include <string.h>
 
+#if TARGET_MOBILE
+#include "posix_spawn.h"
+#endif
+
 #define IPV4_GET_ROUTE_BUFFER_CHUNK_SIZE 65536
 #define SHOW_ROUTE_BUFFER_SIZE 128
 
@@ -650,8 +654,12 @@ static int ipv4_set_route(struct rtentry *route)
 
 	log_debug("%s\n", cmd);
 
+#if TARGET_MOBILE
+    int res = run_cmd(cmd);
+#else
 	int res = system(cmd);
-
+#endif
+    
 	if (res == -1)
 		return ERR_IPV4_SEE_ERRNO;
 #endif
@@ -717,7 +725,11 @@ static int ipv4_del_route(struct rtentry *route)
 
 	log_debug("%s\n", cmd);
 
-	int res = system(cmd);
+#if TARGET_MOBILE
+    int res = run_cmd(cmd);
+#else
+    int res = system(cmd);
+#endif
 
 	if (res == -1)
 		return ERR_IPV4_SEE_ERRNO;
@@ -1313,7 +1325,11 @@ int ipv4_del_nameservers_from_resolv_conf(struct tunnel *tunnel)
 		        );
 
 		log_debug("resolvconf_call: %s\n", resolvconf_call);
-		ret = system(resolvconf_call);
+#if TARGET_MOBILE
+        ret = run_cmd(resolvconf_call);
+#else
+        ret = system(resolvconf_call);
+#endif
 		free(resolvconf_call);
 		if (ret == -1)
 			return ERR_IPV4_SEE_ERRNO;

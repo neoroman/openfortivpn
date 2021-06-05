@@ -31,6 +31,12 @@
 #define ERR_CFG_NO_MEM		-4
 #define ERR_CFG_CANNOT_READ	-5
 
+#if TARGET_MOBILE
+#define NETSTAT_PATH ""
+#define PPP_PATH ""
+#define RESOLVCONF_PATH ""
+#endif
+
 static inline const char *err_cfg_str(int code)
 {
 	if (code == ERR_CFG_SEE_ERRNO)

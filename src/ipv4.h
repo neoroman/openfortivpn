@@ -21,7 +21,11 @@
 #include <sys/types.h>
 #include <sys/socket.h>
 #include <netinet/in.h>
+#if TARGET_MOBILE
+#include "route.h"
+#else
 #include <net/route.h>
+#endif
 
 #if !HAVE_RT_ENTRY_WITH_RT_DST
 /*

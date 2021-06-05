@@ -68,6 +68,9 @@
 #include <string.h>
 #include <assert.h>
 
+#if TARGET_MOBILE
+#include <util.h>
+#endif
 
 struct ofv_varr {
 	unsigned int cap;	// current capacity
@@ -510,17 +513,17 @@ int ppp_interface_is_up(struct tunnel *tunnel)
 	}
 
 	for (ifa = ifap; ifa != NULL; ifa = ifa->ifa_next) {
-		if ((
+		if (
 #if HAVE_USR_SBIN_PPPD
-		            (tunnel->config->pppd_ifname
+		            ((tunnel->config->pppd_ifname
 		             && strstr(ifa->ifa_name, tunnel->config->pppd_ifname)
 		             != NULL)
-		            || strstr(ifa->ifa_name, "ppp") != NULL
+		            || strstr(ifa->ifa_name, "ppp") != NULL) &&
 #endif
 #if HAVE_USR_SBIN_PPP
-		            strstr(ifa->ifa_name, "tun") != NULL
+		            (strstr(ifa->ifa_name, "tun") != NULL) &&
 #endif
-		    ) && ifa->ifa_flags & IFF_UP) {
+		    ifa->ifa_flags & IFF_UP) {
 			if (&(ifa->ifa_addr->sa_family) != NULL
 			    && ifa->ifa_addr->sa_family == AF_INET) {
 				struct in_addr if_ip_addr =

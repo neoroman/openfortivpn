@@ -31,10 +31,13 @@
 #define ERR_CFG_NO_MEM		-4
 #define ERR_CFG_CANNOT_READ	-5
 
-#if TARGET_MOBILE
-#define NETSTAT_PATH ""
-#define PPP_PATH ""
-#define RESOLVCONF_PATH ""
+#if TARGET_MACOS
+#define SYSCONFDIR "/usr/local/etc/openfortivpn"
+#define NETSTAT_PATH "/usr/sbin/netstat"
+#define PPP_PATH "/usr/sbin/pppd"
+#define RESOLVCONF_PATH "/usr/sbin/netstat"
+#define VERSION "1.0.0"
+#define REVISION "1"
 #endif
 
 static inline const char *err_cfg_str(int code)

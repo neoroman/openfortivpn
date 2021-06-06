@@ -68,7 +68,7 @@
 #include <string.h>
 #include <assert.h>
 
-#if TARGET_MOBILE
+#if TARGET_MACOS
 #include <util.h>
 #endif
 

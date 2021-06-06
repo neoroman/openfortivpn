@@ -634,11 +634,13 @@ int main(int argc, char **argv)
 	if (cfg.otp[0] != '\0')
 		log_debug("One-time password = \"%s\"\n", cfg.otp);
 
+#ifndef TARGET_MACOS
 	if (geteuid() != 0) {
 		log_error("This process was not spawned with root privileges, which are required.\n");
 		ret = EXIT_FAILURE;
 		goto exit;
 	}
+#endif
 
 	do {
 		if (run_tunnel(&cfg) != 0)
